@@ -1,0 +1,21 @@
+.social {
+  display: flex;
+  horiz-align: center;
+  justify-content: center;;
+
+  .icon {
+    background-color: #efefef;
+    fill: #111111;
+    border-radius: 15%;
+    width: 28px;
+    height: 28px;
+    margin: 5px;
+    display: inline-block;
+
+    & svg {
+      height: 14px;
+      width: 14px;
+      margin: 7px;
+    }
+  }
+}
