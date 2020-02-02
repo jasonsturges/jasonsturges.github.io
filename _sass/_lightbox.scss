@@ -20,8 +20,7 @@
   max-height: 80%;
   position: relative;
   top: -100%;
-  /* Transition */
-  transition: all 1s ease;
+  transition: all 700ms ease;
 }
 
 .lightbox:target {
@@ -29,7 +28,7 @@
   top: 0;
   opacity: 1;
   pointer-events: auto;
-  transition: all 1.2s ease;
+  transition: all 1s ease;
 }
 
 .lightbox:target img {
