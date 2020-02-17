@@ -1,17 +1,19 @@
 html, body {
   background: #010101;
-  color: #fff;
   margin: 0;
   padding: 0;
-  font-family: cardo, serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 section {
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }

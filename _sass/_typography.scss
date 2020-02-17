@@ -1,4 +1,38 @@
+html, body {
+  color: #fff;
+  font-family: cardo, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: #3498db;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+figcaption {
+  font-size: 0.8rem;
+}
+
+h1 {
+  font-family: playfair-display, serif;
+  margin: 30px 0;
+  font-size: 5rem;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
 h2 {
   font-family: bebas-neue, sans-serif;
   text-align: center;
 }
+
+
