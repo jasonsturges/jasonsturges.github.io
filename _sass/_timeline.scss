@@ -23,7 +23,7 @@
     .info {
       display: grid;
       grid-template-columns: 20px 40px 1fr;
-      align-items: center;
+      align-items: top;
       gap: 0.3rem;
 
       .long {
@@ -38,7 +38,7 @@
         position: relative;
         width: 16px;
         height: 16px;
-        background: #1a1e23;
+        background: #010101;
         border-radius: 50%;
 
         &::before {
@@ -48,7 +48,7 @@
           left: -4px;
           right: -4px;
           bottom: -4px;
-          background: #1a1e23;
+          background: #010101;
         }
 
         &::after {
