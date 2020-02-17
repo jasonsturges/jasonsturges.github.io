@@ -10,3 +10,23 @@
 .grid-xl {
   grid-column: xl;
 }
+
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1.5rem  [col1-start] minmax(0, 360px) 1.5rem [col2-start] minmax(0, 360px) [col2-end] 1.5rem 1fr ;
+
+  .full {
+    grid-column-start: col1-start;
+    grid-column-end: col2-end;
+  }
+
+  .left {
+    grid-column: col1-start;
+  }
+
+  .right {
+    grid-column: col2-start;
+  }
+}
+
