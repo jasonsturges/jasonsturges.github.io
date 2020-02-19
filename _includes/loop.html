@@ -1,42 +1,13 @@
-<div class="post-list inner">
-  {% if site.posts.size > 0 %} 
-  {% for post in site.posts %}
-  <article class="post">
-    <header class="post-header">
-      <div class="tag-links">
-        {% for category in post.categories %}
-          {{ category }}
-        {% endfor %}
-      </div>
-      <div class="post-header-wrap">
-        <h2 class="post-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-        <div class="post-meta">
-          <img class="author-avatar" src="http://cdn.jasonsturges.com/avatar/jason-sturges.jpg" alt="Jason Sturges" />
-          <span class="post-author">by
-            <a href="/about">{{ site.author }}</a>
-          </span>
-          <time class="published" datetime="{{ post.date | date: "%Y/%m/%d" }}">{{ post.date | date: "%B %-d %Y" }}</time>
-        </div>
-      </div>
-    </header>
-    <div class="post-content">
-      {% if site.show_excerpts %}
-        {{ post.excerpt }}
-      {% endif %}
-      <div class="read-more">
-        <a class="button" href="{{ post.url | relative_url }}" title="How To Choose An Interior Designer">Read More
-          <span aria-hidden="true">
-            <span class="line left"></span>
-            <span class="line top"></span>
-            <span class="line right"></span>
-            <span class="line bottom"></span>
-          </span>
-        </a>
-      </div>
-    </div>
-  </article>
-  {% endfor %}
+<div class="posts">
+  {% if site.posts.size > 0 %}
+  <ul>
+    {% for post in site.posts %}
+    <li>
+      <h3 class="title">
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </h3>
+    </li>
+    {% endfor %}
+  </ul>
   {% endif %}
 </div>
