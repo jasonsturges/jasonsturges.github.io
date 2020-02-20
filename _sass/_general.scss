@@ -22,13 +22,3 @@ img {
 section {
   padding-bottom: 3rem;
 }
-
-ul {
-  list-style-type: none;
-
-  li:before {
-    content: '\2014';
-    position: absolute;
-    margin-left: -20px;
-  }
-}
