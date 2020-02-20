@@ -3,8 +3,15 @@
 
 @charset "utf-8";
 
+@mixin rounded($radius:4px) {
+  -webkit-border-radius : $radius;
+  -moz-border-radius : $radius;
+  border-radius : $radius;
+}
+
 @import
 "avatar",
+"code",
 "cover",
 "footer",
 "general",

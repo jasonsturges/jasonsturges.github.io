@@ -25,6 +25,7 @@ show_excerpts: true
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 
 sass:
   style: compressed
