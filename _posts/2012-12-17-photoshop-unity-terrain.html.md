@@ -11,101 +11,87 @@ tags:
 
 Terrains in Unity may be created from height maps designed with Photoshop.
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-photoshop-terrain.png" alt="unity-photoshop-terrain" />
+![unity-photoshop-terrain](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-photoshop-terrain.png)
 
 Height maps should be sized to a power of two plus one (65, 129, 257, 513, 1025, 2049 in pixels) for width and height.
 
-In Photoshop, start by creating a new image by *File* Â» *New*
+In Photoshop, start by creating a new image by *File* &raquo; *New*
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/photoshop-new-terrain.png" alt="photoshop-new-terrain" />
+![photoshop-new-terrain](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/photoshop-new-terrain.png)
 
 Adjust foreground and background colors to height thresholds. Lighter colors will raise elevation to peaks, while darker colors sink to origin.
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/photoshop-foreground-background-colors.png" alt="photoshop-foreground-background-colors" />
+![photoshop-foreground-background-colors](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/photoshop-foreground-background-colors.png)
 
-Seed the terrain height map by rendering clouds. In Photoshop, select *Filter* Â» *Render* Â» *Clouds*.
+Seed the terrain height map by rendering clouds. In Photoshop, select *Filter* &raquo; *Render* &raquo; *Clouds*.
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/photoshop-filter-render-clouds.png" alt="photoshop-filter-render-clouds" />
+![photoshop-filter-render-clouds](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/photoshop-filter-render-clouds.png)
 
 This alone may be used to generate a terrain.
 
-Applying additional filters may enhance the terrain, such as adding difference clouds in Photoshop by selecting *Filter* Â» *Render* Â» *Difference Clouds*.
+Applying additional filters may enhance the terrain, such as adding difference clouds in Photoshop by selecting *Filter* &raquo; *Render* &raquo; *Difference Clouds*.
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/photoshop-filter-render-difference-clouds.png" alt="photoshop-filter-render-difference-clouds" />
+![photoshop-filter-render-difference-clouds](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/photoshop-filter-render-difference-clouds.png)
 
 Further enhance by applying Photoshop's Plastic Wrap filter:
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/terrain-plastic-wrap.png" alt="terrain-plastic-wrap" />
+![terrain-plastic-wrap](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/terrain-plastic-wrap.png)
 
 Numerous filters enhance a terrain, such as:
 
-<div class="row">
-  <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-    <img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/terrain-bas-relief.png" alt="terrain-bas-relief" />
-    bas relief
-  </div>
+![terrain-bas-relief](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/terrain-bas-relief.png)
+bas relief
 
-  <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-    <img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/terrain-craquelure.png" alt="terrain-craquelure" />
-    craquelure
-  </div>
+![terrain-craquelure](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/terrain-craquelure.png)
+craquelure
 
-  <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-    <img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/terrain-cutout.png" alt="terrain-cutout" />
-    cutout
-  </div>
+![terrain-cutout](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/terrain-cutout.png)
+cutout
 
-  <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-    <img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/terrain-fresco.png" alt="terrain-fresco" />
-    fresco
-  </div>
+![terrain-fresco](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/terrain-fresco.png)
+fresco
 
-  <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-    <img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/terrain-sumi-e.png" alt="terrain-sumi-e" />
-    sumi-e
-  </div>
+![terrain-sumi-e](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/terrain-sumi-e.png)
+sumi-e
 
-  <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-    <img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/terrain-watercolor.png" alt="terrain-watercolor" />
-    watercolor
-  </div>
-</div>
+![terrain-watercolor](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/terrain-watercolor.png)
+watercolor
 
 
 Unity imports terrain height map data as Photoshop Raw with a single channel.
 
 In Photoshop, remove all channels except one.
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/photoshop-channels.png" alt="photoshop-channels" />
+![photoshop-channels](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/photoshop-channels.png)
 
 In Photoshop, save as a Photoshop Raw (.raw) file.
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/photoshop-raw.png" alt="photoshop-raw" />
+![photoshop-raw](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/photoshop-raw.png)
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/photoshop-raw-options.png" alt="photoshop-raw-options" />
+![photoshop-raw-options](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/photoshop-raw-options.png)
 
-In Unity, create a new terrain selecting *Terrain* Â» *Create Terrain*
+In Unity, create a new terrain selecting *Terrain* &raquo; *Create Terrain*
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/create-terrain.png" alt="create-terrain" />
+![create-terrain](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/create-terrain.png)
 
 This will create new terrain asset in Unity.
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-new-terrain.png" alt="unity-new-terrain" />
+![unity-new-terrain](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-new-terrain.png)
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-new-terrain-asset.png" alt="unity-new-terrain-asset" />
+![unity-new-terrain-asset](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-new-terrain-asset.png)
 
-In Unity, import the raw height map by selecting *Terrain* Â» *Import Heightmap - Raw...* and select the Photoshop raw image.
+In Unity, import the raw height map by selecting *Terrain* &raquo; *Import Heightmap - Raw...* and select the Photoshop raw image.
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-import-heightmap.png" alt="unity-import-heightmap" />
+![unity-import-heightmap](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-import-heightmap.png)
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-import-heightmap-options.png" alt="unity-import-heightmap-options" />
+![unity-import-heightmap-options](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-import-heightmap-options.png)
 
 In Unity, the terrain will reflect the height map.
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-terrain.png" alt="unity-terrain" />
+![unity-terrain](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-terrain.png)
 
 Flattening the center of the texture and painting texture, here is an example desert scene.
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-flattened-center-terrain.png" alt="unity-flattened-center-terrain" />
+![unity-flattened-center-terrain](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-flattened-center-terrain.png)
 
-<img class="img-fluid" src="http://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-terrain-paint-texture.png" alt="unity-terrain-paint-texture" />
+![unity-terrain-paint-texture](https://labs.jasonsturges.com/unity/terrain-photoshop-example/assets/unity-terrain-paint-texture.png)
