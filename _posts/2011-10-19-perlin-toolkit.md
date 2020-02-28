@@ -2,7 +2,6 @@
 layout: post
 title:  "Perlin Toolkit"
 date:   2011-10-29 02:59:00
-categories: technology
 tags:
 - ActionScript
 - random
