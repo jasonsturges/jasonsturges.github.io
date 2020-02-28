@@ -4,9 +4,9 @@ title: Creating a Terrain for Unity 3D with Photoshop
 date: 2012-12-17 07:39:00
 tags:
 - Photoshop
-- terrain
 - Unity
 - 3D
+- terrain
 ---
 
 Terrains in Unity may be created from height maps designed with Photoshop.
