@@ -1,6 +1,7 @@
 ---
 layout: default
 template: "home-template"
+show_excerpts: false
 ---
 
 <div class="cover">
@@ -41,10 +42,10 @@ template: "home-template"
 </section>
 
 
-<section>
-  <div class="grid">
+<section class="two-column">
+  <div class="full">
     <h2>Archives</h2>
+
     {% include loop.html %}
   </div>
 </section>
-

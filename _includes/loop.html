@@ -1,11 +1,19 @@
-<div class="posts">
+<div >
   {% if site.posts.size > 0 %}
-  <ul>
+  <ul class="posts">
     {% for post in site.posts %}
-    <li>
-      <h3 class="title">
-        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      </h3>
+    <li class="item ">
+      <div class="info">
+        <time class="published" datetime="{{ post.date | date: "%Y/%m/%d" }}">{{ post.date | date: "%b %-d %Y" }}</time>
+        <h3 class="title">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h3>
+      </div>
+      <div class="content">
+        {% if page.show_excerpts %}
+        {{ post.excerpt }}
+        {% endif %}
+      </div>
     </li>
     {% endfor %}
   </ul>
