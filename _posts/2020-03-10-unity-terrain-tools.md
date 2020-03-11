@@ -60,9 +60,3 @@ In the *Inspector*, under *Terrain*
 - In the scene, left-click to raise elevation; or, <kbd>CONTRORL</kbd> left-click to lower elevation
 
 ![unity-terrain-paint](https://labs.jasonsturges.com/unity/terrain-tools/unity-terrain-paint.gif)
-
-Demo scene created with Unity Terrain Tools:
-
-![demo](https://labs.jasonsturges.com/unity/terrain-tools/demo.png)
-
-[Launch site](https://labs.jasonsturges.com/unity/terrain-tools/demo)
