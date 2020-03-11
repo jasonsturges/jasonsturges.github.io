@@ -15,7 +15,7 @@ Terrains in Unity may be generated using Blender's ANT Landscape Generator.
 
 Install ANT Landscape Generator if not already in Blender.
 
-In Blender, select *File* Â» *User Preferences...*:
+In Blender, select *File* &raquo; *User Preferences...*:
 
 <img src="https://labs.jasonsturges.com/unity/terrain-blender-ant-landscape-generator/assets/blender-user-preferences.png" alt="Blender user preferences" />
 
@@ -33,7 +33,7 @@ With a new scene ready in Blender, the default camera and lamp may be removed. O
 
 <img src="https://labs.jasonsturges.com/unity/terrain-blender-ant-landscape-generator/assets/blender-new-scene.png" alt="Blender new scene" />
 
-Create a landscape in Blender by selecting *Add* Â» *Mesh* Â» *Landscape*.
+Create a landscape in Blender by selecting *Add* &raquo; *Mesh* &raquo; *Landscape*.
 
 <img src="https://labs.jasonsturges.com/unity/terrain-blender-ant-landscape-generator/assets/blender-add-landscape.png" alt="Blender add landscape" />
 
@@ -49,11 +49,11 @@ Landscape parameters may be tuned to different terrains.
 
 <img src="https://labs.jasonsturges.com/unity/terrain-blender-ant-landscape-generator/assets/blender-new-landscape-islands.png" alt="Blender new landscape islands" />
 
-With the landscacpe selected in Blender, export the mesh to a Wavefront OBJ file by selecting *File* Â» *Export* Â» *Wavefront (.obj)*.
+With the landscacpe selected in Blender, export the mesh to a Wavefront OBJ file by selecting *File* &raquo; *Export* &raquo; *Wavefront (.obj)*.
 
 <img src="https://labs.jasonsturges.com/unity/terrain-blender-ant-landscape-generator/assets/blender-export-landscape-obj.png" alt="Blender export landscape obj" />
 
-In unity, create a new terrain by selecting *Terrain* Â» *Create Terrain*
+In unity, create a new terrain by selecting *Terrain* &raquo; *Create Terrain*
 
 <img src="https://labs.jasonsturges.com/unity/terrain-blender-ant-landscape-generator/assets/unity-create-terrain.png" alt="Unity create terrain" />
 
@@ -79,7 +79,7 @@ Under the Unity project assets, create an Editor folder, and place the Object2Te
 
 <img src="https://labs.jasonsturges.com/unity/terrain-blender-ant-landscape-generator/assets/unity-object2terrain-editor-script.png" alt="Unity object2terrain editor script" />
 
-Now with the default mesh of the terrain selected in the hierarchy, select *Terrain* Â» *Object to Terrain*.
+Now with the default mesh of the terrain selected in the hierarchy, select *Terrain* &raquo; *Object to Terrain*.
 
 <img src="https://labs.jasonsturges.com/unity/terrain-blender-ant-landscape-generator/assets/unity-terrain-menu-object-to-terrain.png" alt="Unity terrain menu object to terrain" />
 
