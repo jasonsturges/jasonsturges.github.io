@@ -9,7 +9,7 @@ tags:
 ---
 
 
-On macOS, JetBrains Rider introduces deep integration with Unity.
+JetBrains Rider introduces deep integration with Unity, especially on macOS where equivalent features of Visual Studio is not available.
 
 First, assure [JetBrains Rider](https://www.jetbrains.com/rider/) is installed - a 30-day free trial is available for evaluation.
 
