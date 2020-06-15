@@ -17,7 +17,7 @@ Within Unity, from the menu select Unity &raquo; Preferences:
 
 ![unity-preferences](https://labs.jasonsturges.com/unity/using-rider-with-unity/unity-preferences.png)
 
-In the Preferences dialog, under the *External Tools* group, change the *Exterrnal Script Editor* to Rider.
+In the Preferences dialog, under the *External Tools* group, change the *External Script Editor* to Rider.
 
 Then, from the Unity Project window, right-click and select *Open C# Project*
 
