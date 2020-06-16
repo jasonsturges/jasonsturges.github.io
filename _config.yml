@@ -30,9 +30,6 @@ highlighter: rouge
 sass:
   style: compressed
 
-include:
-  - _pages
-
 plugins_dir: ./_plugins
 
 plugins:
@@ -45,14 +42,10 @@ jekyl_tidy:
   ignore_env: development
   compress_html: false
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+include:
+  - _pages
+
+exclude:
+  - CNAME
+  - LICENSE
+  - README.md
