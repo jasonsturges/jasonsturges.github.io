@@ -13,6 +13,8 @@ GEM
     ffi (1.12.1)
     ffi (1.12.1-java)
     forwardable-extended (2.6.0)
+    htmlbeautifier (1.3.1)
+    htmlcompressor (0.4.0)
     http_parser.rb (0.6.0)
     http_parser.rb (0.6.0-java)
     i18n (0.9.5)
@@ -38,6 +40,10 @@ GEM
       jekyll (>= 3.3, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-tidy (0.2.2)
+      htmlbeautifier
+      htmlcompressor
+      jekyll
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (1.17.0)
@@ -73,6 +79,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.9)
   jekyll-seo-tag
   jekyll-sitemap
+  jekyll-tidy
   rouge
   tzinfo-data
 
