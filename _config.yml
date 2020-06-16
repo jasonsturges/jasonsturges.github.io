@@ -37,6 +37,11 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-tidy
+
+jekyl_tidy:
+  ignore_env: development
+  compress_html: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
