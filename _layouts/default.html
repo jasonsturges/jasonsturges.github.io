@@ -4,20 +4,13 @@
 {% include head.html %}
 
 <body class="{{ layout.template }}">
-  <div id="page" class="site">
+  {% include header.html %}
 
-    {% include header.html %}
+  <main class="site-main">
+    {{ content }}
+  </main>
 
-    <main class="site-main">
-
-        {{ content }}
-
-    </main>
-
-    {% include footer.html %}
-
-  </div>
-
+  {% include footer.html %}
   {% include analytics.html %}
 </body>
 </html>
