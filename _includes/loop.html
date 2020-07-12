@@ -2,6 +2,7 @@
   {% if site.posts.size > 0 %}
   <ul class="posts">
     {% for post in site.posts %}
+    {% if post.categories contains include.category %}
     <li class="item">
       <div class="info">
         <time class="published" datetime="{{ post.date | date: "%Y/%m/%d" }}">{{ post.date | date: "%Y %b %-d" }}</time>
@@ -15,6 +16,7 @@
         {% endif %}
       </div>
     </li>
+    {% endif %}
     {% endfor %}
   </ul>
   {% endif %}
