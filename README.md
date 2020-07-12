@@ -19,3 +19,12 @@ Build:
 export JEKYLL_VERSION=3.8
 Docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/jekyll:$JEKYLL_VERSION jekyll build
 ```
+
+
+Deploy:
+```shell script
+rm -rf _site
+env RBENV_VERSION=jruby-9.1.17.0 /usr/local/Cellar/rbenv/1.1.2/libexec/rbenv exec jekyll build
+cd _site && aws s3 sync . s3://jasonsturges.com --delete
+cd ..
+```
