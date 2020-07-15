@@ -49,11 +49,11 @@ Landscape parameters may be tuned to different terrains.
 
 <img src="https://labs.jasonsturges.com/unity/terrain-blender-ant-landscape-generator/assets/blender-new-landscape-islands.png" alt="Blender new landscape islands" />
 
-With the landscacpe selected in Blender, export the mesh to a Wavefront OBJ file by selecting *File* &raquo; *Export* &raquo; *Wavefront (.obj)*.
+With the landscape selected in Blender, export the mesh to a Wavefront OBJ file by selecting *File* &raquo; *Export* &raquo; *Wavefront (.obj)*.
 
 <img src="https://labs.jasonsturges.com/unity/terrain-blender-ant-landscape-generator/assets/blender-export-landscape-obj.png" alt="Blender export landscape obj" />
 
-In unity, create a new terrain by selecting *Terrain* &raquo; *Create Terrain*
+In Unity, create a new terrain by selecting *Terrain* &raquo; *Create Terrain*
 
 <img src="https://labs.jasonsturges.com/unity/terrain-blender-ant-landscape-generator/assets/unity-create-terrain.png" alt="Unity create terrain" />
 
@@ -89,10 +89,10 @@ Unity terrain object now reflects the imported landscape mesh from Blender.
 
 Children of the Unity may now be deleted from the terrain object.
 
-#### Scripts
 
+### Scripts
 
-Blender ANT Landscape Generator &raquo; [add_mesh_ant_landscape.py](https://gist.github.com/jasonsturges/01ed26d36ffef78a53d9)
+[Blender ANT Landscape Generator](https://gist.github.com/jasonsturges/01ed26d36ffef78a53d9)
 
 ```py
 # ##### BEGIN GPL LICENSE BLOCK #####
@@ -906,7 +906,7 @@ if __name__ == "__main__":
 ```
 
 
-Unity Object to Terrain &raquo; [Object2Terrain.js](https://gist.github.com/jasonsturges/1f1c8df23aad35aa8236)
+[Unity Object to Terrain](https://gist.github.com/jasonsturges/1f1c8df23aad35aa8236)
 
 ```js
 @MenuItem ("Terrain/Object to Terrain")
