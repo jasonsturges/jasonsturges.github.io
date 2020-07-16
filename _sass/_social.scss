@@ -1,5 +1,6 @@
 .social {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
   .icon {
@@ -8,7 +9,7 @@
     border-radius: 15%;
     margin: 5px;
     display: inline-block;
-    width: 28px;
+    min-width: 28px;
     height: 28px;
     background-size: 16px 16px;
     background-repeat: no-repeat;
