@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Rider with Unity
+title: Using JetBrains Rider with Unity
 date: 2020-06-13 18:00:00
 tags:
 - Unity
@@ -27,7 +27,7 @@ Rider and Unity will now be synchronized with project editing.
 
 ![rider-unity-actions](https://labs.jasonsturges.com/unity/using-rider-with-unity/rider-unity-actions.png)
 
-Alternatively, opening the solution directly in Rider enables *Attach to Unity Editor*
+Alternatively, opening the solution directly in Rider enables *Attach to Unity Editor*:
 
 ![attach-to-unity-editor](https://labs.jasonsturges.com/unity/using-rider-with-unity/attach-to-unity-editor.png)
 
@@ -35,6 +35,6 @@ If you see an alert stating *Unity features unavailable - Make sure Rider packag
 
 ![unity-features-unavailable](https://labs.jasonsturges.com/unity/using-rider-with-unity/unity-features-unavailable.png)
 
-In Unity, go to *Window* &raquo; *Package Manager* and search for *Rider* to install the Rider plugin.
+In Unity, go to *Window* &raquo; *Package Manager* and search for *Rider* to install the latest Rider plugin.
 
 ![unity-package-manager](https://labs.jasonsturges.com/unity/using-rider-with-unity/unity-package-manager.png)
