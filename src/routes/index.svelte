@@ -1,50 +1,58 @@
 <script>
-	import successkid from 'images/successkid.jpg';
+	import AvantGarde from '../components/AvantGarde.svelte';
 </script>
 
 <style>
-	h1, figure, p {
+	.cover {
+		padding: 20px;
+		width: 310px;
+		margin: 20px auto;
 		text-align: center;
-		margin: 0 auto;
 	}
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
+	@media only screen and (min-width: 610px) {
+		.cover {
+			width: 610px;
 		}
+	}
+
+	.cover p {
+		margin: 0;
+		font-family: playfair-display, Arial, serif;
+	}
+
+	.cover .author {
+		font-size: 2em;
+		letter-spacing: 0.65em;
+		text-transform: uppercase;
+		font-weight: 100;
+		line-height: 1em;
+		margin-bottom: 1.6em;
+	}
+
+	.cover .author:first-letter {
+		font-size: 2.2em;
+		display: inline-block;
+	}
+
+	.cover .tagline {
+		font-family: cardo, serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 1.2em;
+		letter-spacing: 0.2em;
+		margin: 1em 0;
+		text-transform: capitalize;
 	}
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Jason Sturges</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<section class="cover">
+	<p class="author">Jason Sturges</p>
+	<AvantGarde />
 
-<figure>
-	<img alt="Success Kid" src="{successkid}">
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+	<p class="tagline">Experimental artist</p>
+</section>
