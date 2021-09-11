@@ -1,0 +1,23 @@
+<div class="bars" id="nav-action">
+  <span class="bar"> </span>
+</div>
+
+<nav id="nav">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/photography">Photography</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</nav>
+
+<script>
+  var bars = document.getElementById("nav-action");
+  var nav = document.getElementById("nav");
+
+  bars.addEventListener("click", function () {
+    bars.classList.toggle('active');
+    nav.classList.toggle('visible');
+  }, false);
+</script>

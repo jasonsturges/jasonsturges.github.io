@@ -1,0 +1,15 @@
+.category {
+  padding-top: 4rem;
+
+  h4 {
+    margin: 0;
+  }
+
+  &.prev {
+    text-align: left;
+  }
+
+  &.category.next {
+    text-align: right;
+  }
+}

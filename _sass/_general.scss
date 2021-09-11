@@ -1,0 +1,29 @@
+html, body {
+  background: #010101;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+address {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding-bottom: 3rem;
+}
+
+ul.spaced li {
+  margin-bottom: 1rem;
+}

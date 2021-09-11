@@ -1,0 +1,39 @@
+.posts {
+  position: relative;
+  display: grid;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+  max-width: 600px;
+  font-size: 1rem;
+  color: white;
+  list-style-type: none;
+
+  .item {
+    .info {
+      padding-left: 21px;
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      align-items: baseline;
+      gap: 3px;
+
+      h3 {
+        margin: 0;
+      }
+
+      time {
+        text-transform: uppercase;
+        font-family: bebas-neue, sans-serif;
+        color: #dedede;
+      }
+    }
+
+    .content {
+      margin: 2px 0 0 115px;
+
+      p {
+        margin: 2px 0 0 0;
+      }
+    }
+  }
+}

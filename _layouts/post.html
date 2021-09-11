@@ -1,0 +1,50 @@
+---
+layout: default
+template: "post-template"
+---
+
+<article class="post">
+  <header class="cover post-header">
+    {% if post.feature_image %}
+    <div class="cover-bg" style="background-image: url({{feature_image}})"></div>
+    {% endif %}
+    <div class="cover-content">
+      <div class="inner">
+        <div class="tag-links">
+          {% for tag in page.tags %}
+            {{ tag }}
+          {% endfor %}
+        </div>
+        <h1 class="post-title">{{ page.title }}</h1>
+        <div class="post-meta">
+          <span class="post-meta-wrap">
+            <time class="published" datetime="{{ page.date | date: "%Y/%m/%d" }}">{{ page.date | date: "%B %-d %Y" }}</time>
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="two-column">
+    <div class="post-content full">
+      {{ content }}
+    </div>
+  </div>
+
+  <div class="two-column">
+    <div class="left category prev">
+      {% if page.previous_in_category %}
+      <h4>Next</h4>
+      <a href="{{ page.previous_in_category.url }}">{{ page.previous_in_category.title }}</a>
+      {% endif %}
+    </div>
+
+    <div class="right category next">
+      {% if page.next_in_category %}
+      <h4>Previous</h4>
+      <a href="{{ page.next_in_category.url }}">{{ page.next_in_category.title }}</a>
+      {% endif %}
+    </div>
+  </div>
+</article>
+

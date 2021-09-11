@@ -1,0 +1,21 @@
+.home-template {
+
+  .navigation {
+    font-family: cardo, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        padding: 0.25em 0;
+      }
+    }
+  }
+
+}
