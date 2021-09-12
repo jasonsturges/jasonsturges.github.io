@@ -1,5 +1,6 @@
 <script>
 	import Nav from '../components/Nav.svelte';
+	import Social from '../components/Social.svelte';
 
 	export let segment;
 </script>
@@ -16,3 +17,5 @@
 <main>
 	<slot></slot>
 </main>
+
+<Social />

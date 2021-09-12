@@ -1,5 +1,6 @@
 <script>
 	import AvantGarde from '../components/AvantGarde.svelte';
+	import Avatar from '../components/Avatar.svelte';
 </script>
 
 <style>
@@ -16,12 +17,9 @@
 		}
 	}
 
-	.cover p {
+	.cover .author {
 		margin: 0;
 		font-family: playfair-display, Arial, serif;
-	}
-
-	.cover .author {
 		font-size: 2em;
 		letter-spacing: 0.65em;
 		text-transform: uppercase;
@@ -44,6 +42,10 @@
 		margin: 1em 0;
 		text-transform: capitalize;
 	}
+
+	.cover .statement {
+		margin: 0 64px;
+	}
 </style>
 
 <svelte:head>
@@ -53,6 +55,9 @@
 <section class="cover">
 	<p class="author">Jason Sturges</p>
 	<AvantGarde />
-
 	<p class="tagline">Experimental artist</p>
+
+	<Avatar />
+
+	<p class="statement">Creative professional leveraging technology for immersive experiences &mdash; technologist; photographer; musician; explorer; human consciousness </p>
 </section>
