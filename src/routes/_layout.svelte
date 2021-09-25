@@ -1,21 +1,21 @@
 <script>
-	import Nav from '../components/Nav.svelte';
-	import Social from '../components/Social.svelte';
+  import Nav from '../components/Nav.svelte';
+  import Footer from '../components/Footer.svelte';
 
-	export let segment;
+  export let segment;
 </script>
 
 <style>
-	main {
-		max-width: 56em;
-		margin: 0 auto;
-	}
+  main {
+    max-width: 56em;
+    margin: 0 auto;
+  }
 </style>
 
-<Nav {segment}/>
+<Nav {segment} />
 
 <main>
-	<slot></slot>
+  <slot></slot>
 </main>
 
-<Social />
+<Footer />
