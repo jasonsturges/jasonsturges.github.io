@@ -1,5 +1,7 @@
 <svelte:head>
   <title>About Jason Sturges</title>
+  <meta name="description" content="Resume of Jason Sturges" />
+  <meta name="keyboards" content="resume, cv, about, information, jason, sturges" />
 </svelte:head>
 
 <style>
