@@ -10,6 +10,16 @@
     grid-template-columns: repeat(2, 1fr)
   }
 
+  .gridcol-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
   ul small {
     display: block
   }
@@ -23,9 +33,27 @@
     position: relative;
     padding-bottom: 15px;
   }
+
+  ul li span {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .initiatives {
+    text-align: center;
+  }
+
+  .initiatives ul li {
+    padding-bottom: 6px;
+  }
+
+  .initiatives ul li strong {
+    font-size: 16px;
+    font-weight: 600;
+  }
 </style>
 
-<h1>About this site</h1>
+<h1>About Jason Sturges</h1>
 
 <section class="statement">
   <h2>Statement</h2>
@@ -42,7 +70,6 @@
 </section>
 
 <div class="gridcol-2">
-
   <section class="publications">
     <h2>Publications</h2>
 
@@ -108,10 +135,38 @@
       </li>
     </ul>
   </section>
-
 </div>
 
 
+<section class="initiatives">
+  <h2>Initiatives</h2>
 
+  <div class="gridcol-3">
+    <div>
+      <h2>Stack Overflow</h2>
+      <ul>
+        <li><strong>Reputation <a href="https://stackoverflow.com/users/798448/jason-sturges">15,495</a></strong></li>
+        <li>13 gold, 55 silver, 74 bronze badges</li>
+        <li><a href="https://stackexchange.com/leagues/1/alltime/stackoverflow/2008-07-31/798448#798448">Top 3%</a>
+          overall in user reputation leagues
+        </li>
+      </ul>
+    </div>
 
+    <div>
+      <h2>Stack Exchange</h2>
+      <ul>
+        <li><strong>Reputation <a href="https://stackexchange.com/users/420647/jason-sturges">20,379</a></strong></li>
+        <li>17 gold, 78 silver, 111 bronze badges</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>GitHub</h2>
+      <ul>
+        <li>Arctic Code Vault Contributor</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
