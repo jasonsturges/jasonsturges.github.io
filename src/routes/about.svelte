@@ -10,50 +10,18 @@
     grid-template-columns: repeat(2, 1fr)
   }
 
-  ul.lines small {
+  ul small {
     display: block
   }
 
-  ul.lines {
+  ul {
     list-style-type: none;
     padding: 0;
   }
 
-  ul.lines li {
+  ul li {
     position: relative;
-    margin-left: 15px;
-    padding-left: 25px;
     padding-bottom: 15px;
-  }
-
-  ul.lines li::before,
-  ul.lines li::after {
-    content: "";
-    display: block;
-    position: absolute;
-  }
-
-  ul.lines li::before {
-    width: 7px;
-    height: 7px;
-    border: 3px solid #efefef;
-    background: #212121;
-    border-radius: 50%;
-    left: 0;
-    top: 5px;
-    z-index: 1;
-  }
-
-  ul.lines li:after {
-    width: 3px;
-    height: 100%;
-    background: #efefef;
-    left: 5px;
-    top: 5px;
-  }
-
-  ul.lines li:last-of-type {
-    padding-bottom: 3px;
   }
 </style>
 
@@ -78,7 +46,7 @@
   <section class="publications">
     <h2>Publications</h2>
 
-    <ul class="lines">
+    <ul>
       <li>
         <span><a href="https://www.apress.com/us/book/9781484210956">Learn Pixi.js</a></span>
         <small>Technical Reviewer</small>
@@ -105,7 +73,7 @@
   <section class="experience">
     <h2>Experience</h2>
 
-    <ul class="lines">
+    <ul>
       <li>
         <span>Kannegiesser ETECH</span> &mdash; Senior Frontend Developer
         <small>Industrial equipment</small>
@@ -140,7 +108,7 @@
       </li>
     </ul>
   </section>
-  
+
 </div>
 
 
