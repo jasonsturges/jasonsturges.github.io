@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "jasonsturges",
+  "description": "Personal website of Jason Sturges",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
