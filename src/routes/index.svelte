@@ -63,5 +63,5 @@
   <Avatar />
 
   <p class="statement">Creative professional leveraging technology for immersive experiences &mdash; technologist;
-    photographer; musician; explorer; human consciousness</p>
+    musician; photographer; explorer; human consciousness</p>
 </section>
