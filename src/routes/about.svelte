@@ -5,16 +5,6 @@
 </svelte:head>
 
 <style>
-  .gridcol-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr)
-  }
-
-  .gridcol-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr)
-  }
-
   h2 {
     font-size: 24px;
     margin-bottom: 0;
