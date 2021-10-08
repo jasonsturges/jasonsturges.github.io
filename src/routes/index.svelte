@@ -2,7 +2,7 @@
   <title>Jason Sturges</title>
   <meta name="description"
         content="Jason Sturges, avant-garde experimental artist.  Creative professional leveraging technology for immersive experiences - technologist; photographer; musician; explorer; human consciousness" />
-  <meta name="keyboards" content="artist, technologist, musician, photographer, jason, sturges" />
+  <meta name="keywords" content="artist, technologist, musician, photographer, jason, sturges" />
 </svelte:head>
 
 <script>
