@@ -4,7 +4,7 @@
 
 <style>
   nav {
-    border-bottom: 1px solid rgba(255, 62, 0, 0.1);
+    border-bottom: 1px solid rgba(239, 239, 239, 0.05);
     font-weight: 300;
     padding: 0 1em;
   }
