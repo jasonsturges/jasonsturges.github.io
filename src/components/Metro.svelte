@@ -20,7 +20,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 120px;
+    min-height: min(20vw, 128px);
     display: flex;
     text-align: center;
     align-items: center;
