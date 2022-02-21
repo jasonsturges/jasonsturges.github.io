@@ -13,6 +13,7 @@
     "jason sturges"
   ],
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "node ./scripts/build",
     "build:prod": "cross-env NODE_ENV=production node ./scripts/build",
