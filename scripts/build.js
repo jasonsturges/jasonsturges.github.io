@@ -1,7 +1,7 @@
 const fse = require('fs-extra');
 const path = require('path');
 const ejs = require('ejs');
-const marked = require('marked');
+const { marked } = require('marked');
 const frontMatter = require('front-matter');
 const glob = require('glob');
 const config = require('../site.config');
