@@ -26,7 +26,7 @@
 
   .cover .author {
     margin: 0 0 1.6em;
-    font-family: playfair-display, Arial, serif;
+    font-family: playfair-display, serif;
     font-size: 2em;
     letter-spacing: 0.65em;
     text-transform: uppercase;
