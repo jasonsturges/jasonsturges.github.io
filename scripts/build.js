@@ -1,10 +1,11 @@
 import fse from "fs-extra";
-import path from "path"
-import ejs from "ejs"
-import {marked} from "marked"
-import frontMatter from "front-matter"
+import path from "path";
+import ejs from "ejs";
+import {marked} from "marked";
+import frontMatter from "front-matter";
 import glob from "glob";
-import config from "../site.config.js"
+import prettier from "prettier";
+import config from "../site.config.js";
 
 const srcPath = './src';
 const distPath = config.build.outputPath;
@@ -61,6 +62,8 @@ files.forEach((file, i) => {
     })
   );
 
+  const formatted = prettier.format(completePage, { parser: 'html' });
+
   // save the html file
-  fse.writeFileSync(`${destPath}/${fileData.name}.html`, completePage);
+  fse.writeFileSync(`${destPath}/${fileData.name}.html`, formatted);
 });
