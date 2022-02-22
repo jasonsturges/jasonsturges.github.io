@@ -30,6 +30,7 @@
     "front-matter": "^4.0.2",
     "fs-extra": "^10.0.0",
     "glob": "^7.2.0",
+    "live-server": "^1.2.1",
     "marked": "^4.0.12",
     "prettier": "^2.5.1",
     "sass": "^1.49.8",
