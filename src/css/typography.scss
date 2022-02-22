@@ -1,8 +1,17 @@
-a {
-  color: #1e6bb8;
-  text-decoration: none;
+// Headings: Acumin-Pro
+// Body: Poppins
+html,
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
 }
 
-a:hover {
-  text-decoration: underline;
+a {
+  text-decoration: none;
+  color: #3498db;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

@@ -1,0 +1,18 @@
+.main-content {
+  section {
+    min-height: 66vh;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+
+    .background {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+  }
+}

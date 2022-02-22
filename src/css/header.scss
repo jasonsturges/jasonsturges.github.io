@@ -1,71 +1,165 @@
-.page-header {
-  color: #fff;
-  text-align: center;
-  background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957);
-}
+header.site-header {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2.5vw 4vw;
+  pointer-events: auto;
 
-@media screen and (min-width: 64em) {
-  .page-header {
-    padding: 5rem 6rem;
+  .desktop {
+    position: relative;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+
+    .title-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      flex: 1 0 67%;
+      align-items: center;
+
+      .title {
+        flex-grow: 0;
+        flex-shrink: 0;
+        backface-visibility: hidden;
+      }
+    }
+
+    nav {
+      text-align: right;
+      margin-left: auto;
+      padding-left: 1.5vw;
+      flex-grow: 1;
+      flex-shrink: 1;
+
+      .nav-wrapper {
+        display: block;
+
+        .nav-list {
+          justify-content: flex-end;
+          display: inline-flex;
+          flex-wrap: wrap;
+
+          .nav-item {
+            white-space: nowrap;
+            font-size: calc((1 - 1) * 1.2vw + 1rem);
+            font-family: Poppins;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: 0em;
+            text-transform: none;
+            line-height: 1.8em;
+            text-decoration: none;
+            backface-visibility: hidden;
+            padding: 0.1em 0;
+          }
+
+          .nav-item:not(:first-child) {
+            margin-left: 1.3vw;
+          }
+        }
+      }
+
+      a {
+        white-space: nowrap;
+        text-decoration: none;
+        backface-visibility: hidden;
+        padding: 0.1em 0;
+        font-size: calc((1 - 1) * 1.2vw + 1rem);
+      }
+    }
+
+    .nav-actions {
+      margin-right: 0;
+      flex-grow: 0;
+      flex-shrink: 1;
+      display: inline-flex;
+      align-items: center;
+
+      a {
+        color: #fff;
+        margin-left: 1.5vw;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        display: block;
+        box-sizing: content-box;
+        line-height: 1;
+      }
+    }
   }
 }
 
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .page-header {
-    padding: 3rem 4rem;
-  }
-}
-
-@media screen and (max-width: 42em) {
-  .page-header {
-    padding: 2rem 1rem;
-  }
-}
-
-.project-name {
-  margin-top: 0;
-  margin-bottom: 0.1rem;
-}
-
-@media screen and (min-width: 64em) {
-  .project-name {
-    font-size: 3.25rem;
-  }
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .project-name {
-    font-size: 2.25rem;
-  }
-}
-
-@media screen and (max-width: 42em) {
-  .project-name {
-    font-size: 1.75rem;
-  }
-}
-
-.project-tagline {
-  margin-bottom: 2rem;
-  font-weight: normal;
-  opacity: 0.7;
-}
-
-@media screen and (min-width: 64em) {
-  .project-tagline {
-    font-size: 1.25rem;
-  }
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .project-tagline {
-    font-size: 1.15rem;
-  }
-}
-
-@media screen and (max-width: 42em) {
-  .project-tagline {
-    font-size: 1rem;
-  }
-}
+//.page-header {
+//  color: #fff;
+//  text-align: center;
+//  background-color: #159957;
+//  background-image: linear-gradient(120deg, #155799, #159957);
+//}
+//
+//@media screen and (min-width: 64em) {
+//  .page-header {
+//    padding: 5rem 6rem;
+//  }
+//}
+//
+//@media screen and (min-width: 42em) and (max-width: 64em) {
+//  .page-header {
+//    padding: 3rem 4rem;
+//  }
+//}
+//
+//@media screen and (max-width: 42em) {
+//  .page-header {
+//    padding: 2rem 1rem;
+//  }
+//}
+//
+//.project-name {
+//  margin-top: 0;
+//  margin-bottom: 0.1rem;
+//}
+//
+//@media screen and (min-width: 64em) {
+//  .project-name {
+//    font-size: 3.25rem;
+//  }
+//}
+//
+//@media screen and (min-width: 42em) and (max-width: 64em) {
+//  .project-name {
+//    font-size: 2.25rem;
+//  }
+//}
+//
+//@media screen and (max-width: 42em) {
+//  .project-name {
+//    font-size: 1.75rem;
+//  }
+//}
+//
+//.project-tagline {
+//  margin-bottom: 2rem;
+//  font-weight: normal;
+//  opacity: 0.7;
+//}
+//
+//@media screen and (min-width: 64em) {
+//  .project-tagline {
+//    font-size: 1.25rem;
+//  }
+//}
+//
+//@media screen and (min-width: 42em) and (max-width: 64em) {
+//  .project-tagline {
+//    font-size: 1.15rem;
+//  }
+//}
+//
+//@media screen and (max-width: 42em) {
+//  .project-tagline {
+//    font-size: 1rem;
+//  }
+//}
