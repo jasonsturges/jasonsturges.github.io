@@ -54,6 +54,14 @@ export const build = () => {
             const language = hljs.getLanguage(lang) ? lang : 'plaintext';
             return hljs.highlight(code, { language }).value;
           },
+          langPrefix: 'hljs language-',
+          pedantic: false,
+          gfm: true,
+          breaks: false,
+          sanitize: false,
+          smartLists: true,
+          smartypants: false,
+          xhtml: false,
         });
         pageContent = marked(pageData.body);
         break;
