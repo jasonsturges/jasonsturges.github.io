@@ -1,0 +1,28 @@
+{
+  "name": "@vitejs/test-react-emotion",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "debug": "node --inspect-brk vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-switch": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-pipeline-operator": "^7.22.15",
+    "@emotion/babel-plugin": "^11.11.0",
+    "@vitejs/plugin-react": "workspace:*"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}
