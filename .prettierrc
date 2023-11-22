@@ -1,0 +1,6 @@
+{
+  "printWidth": 120,
+  "proseWrap": "never",
+  "trailingComma": "all",
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"]
+}
