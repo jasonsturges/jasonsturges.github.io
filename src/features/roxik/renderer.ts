@@ -1,9 +1,9 @@
 import { PCFSoftShadowMap, ShaderMaterial, WebGLRenderer } from "three";
+import { BokehDepthShader } from "three/addons/shaders/BokehShader2.js";
 import { camera, cameraFrameHandler } from "./camera.ts";
+import { postprocessing } from "./postprocessing.ts";
 import { motionFrameHandler } from "./motion.ts";
 import { scene } from "./scene.ts";
-import { BokehShader, BokehDepthShader } from "three/addons/shaders/BokehShader2.js";
-import { postprocessing } from "./postprocessing.ts";
 
 const el = document.querySelector<HTMLCanvasElement>("canvas");
 export const renderer = new WebGLRenderer({ antialias: true, canvas: el! });

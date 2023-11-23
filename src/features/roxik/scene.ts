@@ -1,22 +1,15 @@
+import type { MotionData } from "./MotionData.ts";
 import {
   Color,
   DirectionalLight,
-  HalfFloatType,
   IcosahedronGeometry,
   Mesh,
-  MeshBasicMaterial,
   MeshLambertMaterial,
   MeshPhongMaterial,
-  OrthographicCamera,
   PlaneGeometry,
   Scene,
-  ShaderMaterial,
   SpotLight,
-  UniformsUtils,
-  WebGLRenderTarget,
 } from "three";
-import { BokehShader } from "three/addons/shaders/BokehShader2.js";
-import type { MotionData } from "./MotionData.ts";
 
 // Scene
 export const scene = new Scene();

@@ -1,3 +1,5 @@
+import type { BokehShaderUniforms } from "three/examples/jsm/shaders/BokehShader2.js";
+import type { IUniform } from "three";
 import {
   HalfFloatType,
   Mesh,
@@ -8,9 +10,7 @@ import {
   UniformsUtils,
   WebGLRenderTarget,
 } from "three";
-import type { IUniform } from "three";
 import { BokehShader } from "three/addons/shaders/BokehShader2.js";
-import type { BokehShaderUniforms } from "three/examples/jsm/shaders/BokehShader2.js";
 
 type PostProcessingSettings = {
   scene: Scene;

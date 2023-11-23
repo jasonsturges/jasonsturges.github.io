@@ -1,5 +1,5 @@
-import { IcosahedronGeometry, Mesh, MeshPhongMaterial, Vector3 } from "three";
 import type { MotionData } from "./MotionData.ts";
+import { IcosahedronGeometry, Mesh, MeshPhongMaterial, Vector3 } from "three";
 import { MotionType } from "./MotionType";
 import { models } from "./scene.ts";
 
