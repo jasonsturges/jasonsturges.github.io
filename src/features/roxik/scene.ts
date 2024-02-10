@@ -1,4 +1,4 @@
-import type { MotionData } from "./MotionData.ts";
+import type { MotionData } from "./types/MotionData.ts";
 import {
   Color,
   DirectionalLight,
@@ -50,8 +50,8 @@ const planeMaterial = new MeshLambertMaterial({
 
 // Geometry
 const length = 8;
-const bet = 0.8;
-const offset = (length - 1) * bet * 0.5;
+const gap = 0.8;
+const offset = (length - 1) * gap * 0.5;
 const geometry = new IcosahedronGeometry(0.3, 2);
 
 export const models: (Mesh<IcosahedronGeometry, MeshPhongMaterial> & MotionData)[] = [];
@@ -61,7 +61,7 @@ for (let i = 0; i < length; i++) {
     for (let k = 0; k < length; k++) {
       const material = sphereMaterials[Math.floor(Math.random() * colors.length)];
       const mesh = new Mesh(geometry, material);
-      mesh.position.set(i * bet - offset, j * bet - offset, k * bet - offset);
+      mesh.position.set(i * gap - offset, j * gap - offset, k * gap - offset);
       mesh.castShadow = true;
 
       models.push(mesh as Mesh<IcosahedronGeometry, MeshPhongMaterial> & MotionData);
