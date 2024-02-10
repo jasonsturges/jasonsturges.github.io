@@ -2,6 +2,13 @@ import { MotionType } from "./types/MotionType.ts";
 import { changeMotion } from "./motion";
 import { pauseCamera, resumeCamera } from "./camera.ts";
 
+let lock = false;
+
+const toggleLock = () => {
+  lock ? resumeCamera() : pauseCamera();
+  lock = !lock;
+};
+
 const keyDownHandler = (event: KeyboardEvent) => {
   const keyCode = event.key;
 
@@ -27,18 +34,9 @@ const keyDownHandler = (event: KeyboardEvent) => {
     case "7":
       changeMotion(MotionType.ANTIGRAVITY);
       break;
-    case "Shift":
-      pauseCamera();
-      break;
-  }
-};
-
-const keyUpHandler = (event: KeyboardEvent) => {
-  const keyCode = event.key;
-
-  switch (keyCode) {
-    case "Shift":
-      resumeCamera();
+    case "l":
+    case "s":
+      toggleLock();
       break;
   }
 };
@@ -48,11 +46,10 @@ const pointerDownHandler = (event: PointerEvent | MouseEvent | TouchEvent) => {
 };
 
 const pointerUpHandler = (event: PointerEvent | MouseEvent | TouchEvent) => {
-  resumeCamera();
+  if (!lock) resumeCamera();
 };
 
 document.addEventListener("keydown", keyDownHandler);
-document.addEventListener("keyup", keyUpHandler);
 document.addEventListener("pointerdown", pointerDownHandler);
 document.addEventListener("pointerup", pointerUpHandler);
 document.addEventListener("pointerout", pointerUpHandler);
