@@ -1,5 +1,7 @@
 import { Clock, IcosahedronGeometry, Mesh, MeshPhongMaterial, PerspectiveCamera, Vector3 } from "three";
+import { OrbitControls } from "three-stdlib";
 import { models } from "./scene.ts";
+import { renderer } from "./renderer.ts";
 
 // Camera properties
 let targetModel: Mesh<IcosahedronGeometry, MeshPhongMaterial>;
@@ -12,11 +14,16 @@ let targetSpeed = 0;
 let rotationAngle = 0;
 let rotationSpeed = 0.03;
 let timer = 0;
+let isPaused = false;
 const clock = new Clock();
 
 // Camera
 export const camera = new PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.001, 1000);
 camera.position.set(0, 0, 10);
+
+// Orbit controls
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.update();
 
 // Change scene
 export const changeCamera = () => {
@@ -30,8 +37,23 @@ export const changeCamera = () => {
 };
 changeCamera();
 
+// Pause camera
+export const pauseCamera = () => {
+  controls.enableZoom = true;
+  isPaused = true;
+};
+
+// Resume camera
+export const resumeCamera = () => {
+  controls.enableZoom = false;
+  controls.target = targetPosition;
+  clock.getDelta();
+  isPaused = false;
+};
+
 // Camera frame handler
 export const cameraFrameHandler = () => {
+  if (isPaused) return;
   const delta = clock.getDelta() * 35;
 
   if (clock.elapsedTime > timer) changeCamera();
