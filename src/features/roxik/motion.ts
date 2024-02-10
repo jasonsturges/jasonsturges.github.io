@@ -1,54 +1,16 @@
-import type { MotionData } from "./MotionData.ts";
-import { IcosahedronGeometry, Mesh, MeshPhongMaterial, Vector3 } from "three";
-import { MotionType } from "./MotionType";
+import type { MotionData } from "./types/MotionData.ts";
+import { Clock, IcosahedronGeometry, Mesh, MeshPhongMaterial, Vector3 } from "three";
+import { MotionType } from "./types/MotionType.ts";
 import { models } from "./scene.ts";
 
 let motionType = MotionType.CUBE;
-let sceneLimit = 100;
-let frameNumber = 0;
 let cutoff = 0;
-let r = 0.0;
-let r0 = 0.0;
-let rp = 0.0;
-let rl = 0.0;
-
-export const changeMotion = (motionType: MotionType, limit = -1) => {
-  cutoff = 0;
-  frameNumber = 0;
-
-  if (limit < 0) {
-    sceneLimit = Math.floor(Math.random() * 140 + 3);
-  } else {
-    sceneLimit = limit;
-  }
-
-  switch (motionType) {
-    case MotionType.ANTIGRAVITY:
-      antigravity();
-      break;
-    case MotionType.CUBE:
-      cube();
-      break;
-    case MotionType.CYLINDER:
-      cylinder();
-      break;
-    case MotionType.GRAVITY:
-      gravity();
-      break;
-    case MotionType.SPHERE:
-      sphere();
-      break;
-    case MotionType.TUBE:
-      tube();
-      break;
-    case MotionType.WAVE:
-      wave();
-      break;
-    default:
-      console.error(`Invalid motion type: ${motionType}`);
-      break;
-  }
-};
+let timer = 0;
+let waveRadius = 0.0;
+let waveRadiusInitial = 0.0;
+let waveRadiusIncrement = 0.0;
+let waveLength = 0.0;
+const clock = new Clock();
 
 const antigravity = () => {
   motionType = MotionType.ANTIGRAVITY;
@@ -59,7 +21,6 @@ const antigravity = () => {
     m.accel = 0.5;
     m.animate = false;
     m.dir = new Vector3();
-
     m.dir.x = Math.random() * 0.25 - 0.125;
     m.dir.y = Math.random() * 0.25 - 0.125;
     m.dir.z = Math.random() * 0.25 - 0.125;
@@ -120,12 +81,11 @@ const cylinder = () => {
 
 const gravity = () => {
   motionType = MotionType.GRAVITY;
-  sceneLimit = 60;
 
   for (let i = 0; i < models.length; i++) {
     const m = models[i];
-    m.dir = new Vector3();
 
+    m.dir = new Vector3();
     m.speed = 0;
     m.accel = 0.5;
     m.animate = false;
@@ -203,14 +163,14 @@ const wave = () => {
   const s = Math.random() + 1;
   let m;
   let n = 0;
-  r = 0;
-  r0 = 0;
-  rl = Math.random() + 1;
-  rp = Math.random() * 0.3 + 0.1;
+  waveRadius = 0;
+  waveRadiusInitial = 0;
+  waveLength = Math.random() + 1;
+  waveRadiusIncrement = Math.random() * 0.3 + 0.1;
 
   for (let i = 0; i < l; i++) {
-    const ty = Math.cos(r) * s;
-    r += t;
+    const ty = Math.cos(waveRadius) * s;
+    waveRadius += t;
 
     for (let j = 0; j < l; j++) {
       n += 1;
@@ -242,7 +202,43 @@ const wave = () => {
   }
 };
 
+export const changeMotion = (motionType?: MotionType) => {
+  timer = clock.elapsedTime + Math.random() + 0.5;
+  cutoff = 0;
+
+  switch (motionType ?? Math.floor(Math.random() * 7)) {
+    case MotionType.ANTIGRAVITY:
+      antigravity();
+      break;
+    case MotionType.CUBE:
+      cube();
+      break;
+    case MotionType.CYLINDER:
+      cylinder();
+      break;
+    case MotionType.GRAVITY:
+      gravity();
+      break;
+    case MotionType.SPHERE:
+      sphere();
+      break;
+    case MotionType.TUBE:
+      tube();
+      break;
+    case MotionType.WAVE:
+      wave();
+      break;
+    default:
+      console.error(`Invalid motion type: ${motionType}`);
+      break;
+  }
+};
+changeMotion(MotionType.CUBE);
+
 export const motionFrameHandler = () => {
+  const delta = clock.getDelta() * 90;
+
+  if (clock.elapsedTime > timer) changeMotion();
   let m: Mesh<IcosahedronGeometry, MeshPhongMaterial> & MotionData;
   let maxp: number;
 
@@ -256,17 +252,17 @@ export const motionFrameHandler = () => {
 
         if (!m.animate) {
           if (m.speed < 0.8) {
-            m.speed = m.speed + m.accel;
+            m.speed = m.speed + m.accel * delta;
           }
 
           let c0 = m.dest.x - m.position.x;
           let c1 = m.dest.y - m.position.y;
           let c2 = m.dest.z - m.position.z;
-          m.position.x = m.position.x + c0 * m.speed;
-          m.position.y = m.position.y + c1 * m.speed;
-          m.position.z = m.position.z + c2 * m.speed;
+          m.position.x = m.position.x + c0 * m.speed * delta;
+          m.position.y = m.position.y + c1 * m.speed * delta;
+          m.position.z = m.position.z + c2 * m.speed * delta;
           if (Math.abs(c0) < 0.05 && Math.abs(c1) < 0.05 && Math.abs(c2) < 0.05) {
-            m.animate = true;
+            m.animate = true; // false?
             m.position.x = m.dest.x;
             m.position.y = m.dest.y;
             m.position.z = m.dest.z;
@@ -275,7 +271,7 @@ export const motionFrameHandler = () => {
       }
 
       maxp = Math.floor(models.length / 40);
-      cutoff += maxp;
+      cutoff += maxp * delta;
       if (cutoff > models.length) cutoff = models.length;
 
       break;
@@ -283,12 +279,12 @@ export const motionFrameHandler = () => {
     case MotionType.ANTIGRAVITY:
       for (let i = 0; i < cutoff; i++) {
         m = models[i];
-        m.position.x += m.dir.x;
-        m.position.y += m.dir.y;
-        m.position.z += m.dir.z;
+        m.position.x += m.dir.x * delta;
+        m.position.y += m.dir.y * delta;
+        m.position.z += m.dir.z * delta;
       }
 
-      cutoff += 30;
+      cutoff += 30 * delta;
       if (cutoff > models.length) {
         cutoff = models.length;
       }
@@ -298,8 +294,8 @@ export const motionFrameHandler = () => {
     case MotionType.GRAVITY:
       for (let i = 0; i < models.length; i++) {
         m = models[i];
-        m.position.y += m.dir.y;
-        m.dir.y -= 0.06;
+        m.position.y += m.dir.y * delta;
+        m.dir.y -= 0.06 * delta;
         if (m.position.y < -9) {
           m.position.y = -9;
           m.dir.y *= -m.accel;
@@ -315,39 +311,35 @@ export const motionFrameHandler = () => {
       let cc = 0;
 
       for (let i = 0; i < max; i++) {
-        cos = Math.cos(r) * rl;
-        r = r + rp;
+        cos = Math.cos(waveRadius) * waveLength;
+        waveRadius = waveRadius + waveRadiusIncrement * delta;
         for (let j = 0; j < max; j++) {
           m = models[cc++];
           m.dest.y = cos;
         }
       }
 
-      r0 += 0.11;
-      r = r0;
+      waveRadiusInitial += 0.11 * delta;
+      waveRadius = waveRadiusInitial;
 
       for (let i = 0; i < cutoff; i++) {
         m = models[i];
         if (m.speed < 0.5) {
-          m.speed += m.accel;
+          m.speed += m.accel * delta;
         }
 
-        m.position.x += (m.dest.x - m.position.x) * m.speed;
-        m.position.y += (m.dest.y - m.position.y) * m.speed;
-        m.position.z += (m.dest.z - m.position.z) * m.speed;
+        m.position.x += (m.dest.x - m.position.x) * m.speed * delta;
+        m.position.y += (m.dest.y - m.position.y) * m.speed * delta;
+        m.position.z += (m.dest.z - m.position.z) * m.speed * delta;
       }
 
       maxp = Math.floor(models.length / 40);
-      cutoff += maxp;
+      cutoff += maxp * delta;
 
       if (cutoff > models.length) {
         cutoff = models.length;
       }
 
       break;
-  }
-
-  if (++frameNumber > sceneLimit) {
-    changeMotion(Math.floor(Math.random() * 7));
   }
 };
