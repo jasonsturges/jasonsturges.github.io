@@ -45,11 +45,11 @@ const keyDownHandler = (event: KeyboardEvent) => {
   }
 };
 
-const pointerDownHandler = (event: PointerEvent | MouseEvent | TouchEvent) => {
+const pointerDownHandler = () => {
   pauseCamera();
 };
 
-const pointerUpHandler = (event: PointerEvent | MouseEvent | TouchEvent) => {
+const pointerUpHandler = () => {
   if (!lock) resumeCamera();
 };
 
