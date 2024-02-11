@@ -34,6 +34,10 @@ const keyDownHandler = (event: KeyboardEvent) => {
     case "7":
       changeMotion(MotionType.ANTIGRAVITY);
       break;
+    case "f":
+      if (!!document.fullscreenElement) void document.exitFullscreen();
+      else document.querySelector<HTMLBodyElement>("body")?.requestFullscreen();
+      break;
     case "l":
     case "s":
       toggleLock();
