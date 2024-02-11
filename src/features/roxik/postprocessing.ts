@@ -50,7 +50,9 @@ postprocessing.rtTextureColor = new WebGLRenderTarget(window.innerWidth, window.
 
 const bokehShader = BokehShader;
 
-postprocessing.bokehUniforms = UniformsUtils.clone(bokehShader.uniforms);
+postprocessing.bokehUniforms = UniformsUtils.clone(
+  bokehShader.uniforms as Partial<BokehShaderUniforms>,
+) as BokehShaderUniforms;
 postprocessing.bokehUniforms["tColor"].value = postprocessing.rtTextureColor.texture;
 postprocessing.bokehUniforms["tDepth"].value = postprocessing.rtTextureDepth.texture;
 postprocessing.bokehUniforms["textureWidth"].value = window.innerWidth;
