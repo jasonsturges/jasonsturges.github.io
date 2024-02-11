@@ -25,8 +25,6 @@ materialDepth.uniforms["mFar"].value = 10;
 renderer.setAnimationLoop(() => {
   cameraFrameHandler();
   motionFrameHandler();
-  // renderer.render(scene, camera);
-  // postprocessing.composer.render( 0.1 );
 
   renderer.clear();
 
