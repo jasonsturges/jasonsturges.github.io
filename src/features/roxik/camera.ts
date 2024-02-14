@@ -23,6 +23,7 @@ camera.position.set(0, 0, 10);
 
 // Orbit controls
 const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableZoom = false;
 controls.update();
 
 // Change scene
