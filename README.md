@@ -1,8 +1,18 @@
 # jasonsturges.github.io
-
 Personal website of Jason Sturges: https://jasonsturges.com
 
 <img width="1376" alt="roxik-2" src="https://github.com/jasonsturges/jasonsturges.github.io/assets/1213591/3bfe9af3-0e09-45e3-86c8-ad256c07c6c7">
+
+Interaction:
+
+| Input                             | Action             |
+|:----------------------------------|:-------------------|
+| Key: <kbd>f</kbd>                 | Fullscreen         |
+| Key: <kbd>s</kbd> or <kbd>l</kbd> | Lock camera motion |
+| Mouse: Left                       | Orbit              |
+| Mouse: Middle (or Wheel)          | Dolly              |
+| Mouse: Right                      | Pan                |
+
 
 ## Getting Started
 
