@@ -153,8 +153,8 @@ const line = () => {
   }
 };
 
-const wave = () => {
-  motionType = MotionType.WAVE;
+const plane = () => {
+  motionType = MotionType.PLANE;
 
   const a = Math.random() * 0.05 + 0.022;
   const l = Math.floor(Math.sqrt(models.length));
@@ -225,8 +225,8 @@ export const changeMotion = (motionType?: MotionType) => {
     case MotionType.LINE:
       line();
       break;
-    case MotionType.WAVE:
-      wave();
+    case MotionType.PLANE:
+      plane();
       break;
     default:
       console.error(`Invalid motion type: ${motionType}`);
@@ -305,7 +305,7 @@ export const motionFrameHandler = () => {
 
       break;
 
-    case MotionType.WAVE:
+    case MotionType.PLANE:
       let cos = 0;
       let max = Math.floor(Math.sqrt(models.length));
       let cc = 0;

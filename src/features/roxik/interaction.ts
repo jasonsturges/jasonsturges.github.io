@@ -26,7 +26,7 @@ const keyDownHandler = (event: KeyboardEvent) => {
       changeMotion(MotionType.LINE);
       break;
     case "5":
-      changeMotion(MotionType.WAVE);
+      changeMotion(MotionType.PLANE);
       break;
     case "6":
       changeMotion(MotionType.GRAVITY);
