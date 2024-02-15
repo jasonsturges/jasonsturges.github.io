@@ -23,7 +23,7 @@ const keyDownHandler = (event: KeyboardEvent) => {
       changeMotion(MotionType.CUBE);
       break;
     case "4":
-      changeMotion(MotionType.TUBE);
+      changeMotion(MotionType.LINE);
       break;
     case "5":
       changeMotion(MotionType.WAVE);

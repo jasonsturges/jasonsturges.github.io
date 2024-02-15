@@ -126,8 +126,8 @@ const sphere = () => {
   }
 };
 
-const tube = () => {
-  motionType = MotionType.TUBE;
+const line = () => {
+  motionType = MotionType.LINE;
 
   const a = Math.random() * 0.05 + 0.022;
   const v = Math.random() * 0.025 + 0.02;
@@ -222,8 +222,8 @@ export const changeMotion = (motionType?: MotionType) => {
     case MotionType.SPHERE:
       sphere();
       break;
-    case MotionType.TUBE:
-      tube();
+    case MotionType.LINE:
+      line();
       break;
     case MotionType.WAVE:
       wave();
@@ -246,7 +246,7 @@ export const motionFrameHandler = () => {
     case MotionType.CUBE:
     case MotionType.CYLINDER:
     case MotionType.SPHERE:
-    case MotionType.TUBE:
+    case MotionType.LINE:
       for (let i = 0; i < cutoff; i++) {
         m = models[i];
 

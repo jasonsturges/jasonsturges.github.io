@@ -4,6 +4,6 @@ export enum MotionType {
   CYLINDER = 2,
   GRAVITY = 3,
   SPHERE = 4,
-  TUBE = 5,
+  LINE = 5,
   WAVE = 6,
 }
