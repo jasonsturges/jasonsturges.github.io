@@ -1,25 +1,127 @@
 ---
 import CodepenIcon from "../icons/CodepenIcon.astro";
+import Divider from "./Divider.astro";
 import GitHubIcon from "../icons/GitHubIcon.astro";
 import InstagramIcon from "../icons/InstagramIcon.astro";
 import YouTubeIcon from "../icons/YouTubeIcon.astro";
 ---
 
-<footer class="body-font text-gray-600">
-  <div class="container mx-auto flex items-center px-5 py-8">
-    <span class="mt-4 inline-flex justify-center sm:ml-auto sm:mt-0 sm:justify-start">
-      <a class="ml-3 text-gray-500" href="https://youtube.com/c/JasonSturges">
-        <YouTubeIcon />
+<Divider />
+
+<footer class="body-font text-gray-400">
+  <div
+    class="container mx-auto flex flex-col flex-wrap px-5 py-24 md:flex-row md:flex-nowrap md:items-center lg:items-start"
+  >
+    <div class="mx-auto w-64 flex-shrink-0 text-center md:mx-0 md:text-left">
+      <a class="title-font flex items-center justify-center font-medium text-gray-300 md:justify-start">
+        <img
+          class="h-10 w-10 rounded-full"
+          src="https://labs.jasonsturges.com/avatar/jason-sturges.webp"
+          alt="Avatar photo"
+        />
+        <span class="ml-3 text-xl">Jason Sturges</span>
       </a>
-      <a class="ml-3 text-gray-500" href="https://instagram.com/jasonsturges">
-        <InstagramIcon />
-      </a>
-      <a class="ml-3 text-gray-500" href="https://codepen.io/jasonsturges">
-        <CodepenIcon />
-      </a>
-      <a class="ml-3 text-gray-500" href="https://github.com/jasonsturges">
-        <GitHubIcon />
-      </a>
-    </span>
+      <p class="mt-2 text-sm text-gray-500">
+        Avant-garde experimental artist, creative professional leveraging technology for immersive experiences.
+      </p>
+    </div>
+    <div class="-mb-10 mt-10 flex flex-grow flex-wrap text-center md:mt-0 md:pl-20 md:text-left">
+      <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+        <h2 class="title-font mb-3 text-sm font-medium tracking-widest text-gray-300">SOCIAL</h2>
+        <nav class="mb-10 list-none">
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://youtube.com/c/JasonSturges">YouTube</a>
+          </li>
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://www.tiktok.com/@jason.sturges">TikTok</a>
+          </li>
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://instagram.com/jasonsturges">Instagram</a>
+          </li>
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://twitter.com/jasonsturges">Twitter</a>
+          </li>
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://www.reddit.com/user/jasonsturges">Reddit</a>
+          </li>
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://www.facebook.com/jason.sturges.1">Facebook</a>
+          </li>
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://www.linkedin.com/in/jasonsturges">LinkedIn</a>
+          </li>
+        </nav>
+      </div>
+      <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+        <h2 class="title-font mb-3 text-sm font-medium tracking-widest text-gray-300">TECHNOLOGY</h2>
+        <nav class="mb-10 list-none">
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://github.com/jasonsturges">GitHub</a>
+          </li>
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://codepen.io/jasonsturges">CodePen</a>
+          </li>
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://stackblitz.com/@jasonsturges">StackBlitz</a>
+          </li>
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://codesandbox.io/u/jasonsturges">CodeSandbox</a>
+          </li>
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://stackoverflow.com/users/798448/jason-sturges"
+              >Stack Overflow</a
+            >
+          </li>
+        </nav>
+      </div>
+      <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+        <h2 class="title-font mb-3 text-sm font-medium tracking-widest text-gray-300">PHOTOGRAPHY</h2>
+        <nav class="mb-10 list-none">
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://500px.com/jasonsturges">500px</a>
+          </li>
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://www.pinterest.com/jasonsturges">Pinterest</a>
+          </li>
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://www.behance.net/jasonsturges">Behance</a>
+          </li>
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://kavyar.com/jasonsturges">Kavyar</a>
+          </li>
+        </nav>
+      </div>
+
+      <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+        <h2 class="title-font mb-3 text-sm font-medium tracking-widest text-gray-300">MUSIC</h2>
+        <nav class="mb-10 list-none">
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://soundcloud.com/jasonsturges">SoundCloud</a>
+          </li>
+          <li>
+            <a class="text-gray-500 hover:text-gray-400" href="https://musescore.com/jasonsturges">MuseScore</a>
+          </li>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="mb-10">
+    <div class="container mx-auto flex flex-col flex-wrap border-t-2 border-lime-500 px-5 py-4 sm:flex-row">
+      <p class="text-center text-sm text-gray-500 sm:text-left">&copy; Jason Sturges</p>
+      <span class="mt-2 inline-flex justify-center sm:ml-auto sm:mt-0 sm:justify-start">
+        <a class="ml-3 text-gray-500" href="https://youtube.com/c/JasonSturges">
+          <YouTubeIcon />
+        </a>
+        <a class="ml-3 text-gray-500" href="https://instagram.com/jasonsturges">
+          <InstagramIcon />
+        </a>
+        <a class="ml-3 text-gray-500" href="https://codepen.io/jasonsturges">
+          <CodepenIcon />
+        </a>
+        <a class="ml-3 text-gray-500" href="https://github.com/jasonsturges">
+          <GitHubIcon />
+        </a>
+      </span>
+    </div>
   </div>
 </footer>
